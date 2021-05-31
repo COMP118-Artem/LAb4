@@ -73,5 +73,9 @@ int main() {
         default:
             cout << "\nWrong choice";
         }
+    } while (choice != 0);
+
+    cout << "\nHave a nice day:)";
+    return 0;
 }
 
