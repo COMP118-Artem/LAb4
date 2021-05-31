@@ -68,5 +68,10 @@ int main() {
 
             delete[] sumRows;
             break;
+        case 0:
+            break;
+        default:
+            cout << "\nWrong choice";
+        }
 }
 
