@@ -23,5 +23,50 @@ int main() {
     const int MAX_ROW = 5;
     double mat[MAX_ROW][MAX_COL];
     double* sumRows;
+    do {
+        showMenu();
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            fillWithRandomNum(mat, MAX_ROW);
+            break;
+        case 2:
+            int row;
+            cout << "\nEnter the row you want to sum: ";
+            cin >> row;
+
+            cout << "\nSum of row is: " << sumOfRow(mat, row, MAX_ROW);
+            break;
+        case 3:
+            sumOfCol(mat, MAX_COL, MAX_ROW);
+            break;
+        case 4:
+            printMatrix(mat, MAX_ROW);
+            break;
+        case 5:
+            cout << "enter a number";
+            cin >> num;
+            if (makeIdentityMatrix(mat, MAX_ROW, num))
+
+                break;
+        case 6:
+            if (isIdentityMatrix(mat, MAX_ROW))
+                cout << "\nMatrix is an identity matrix";
+            else
+                cout << "\nMatrix is NOT an identity matrix";
+            break;
+        case 7:
+            cout << "\nSum of diagonal is: " << sumOfDiagonal(mat, MAX_ROW);
+            break;
+        case 8:
+            sumRows = sumOfRows(mat, MAX_ROW);
+
+            for (int i = 0; i < MAX_ROW; ++i)
+                cout << "\nSum of row " << i << ": " << sumRows[i];
+
+            delete[] sumRows;
+            break;
 }
 
