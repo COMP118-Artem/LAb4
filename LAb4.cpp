@@ -17,4 +17,11 @@ void showMenu() {
     cout << "\n0) Exit";
     cout << "\nEnter choice: ";
 }
+int main() {
+    int choice = 0, num;
+
+    const int MAX_ROW = 5;
+    double mat[MAX_ROW][MAX_COL];
+    double* sumRows;
+}
 
